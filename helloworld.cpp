@@ -1,35 +1,11 @@
 #include <iostream>
 
 int main() {
+    const double PI = 3.14159;
+    const int LIGHT_SPEED = 299792458;
+    const int WIDTH = 1920;
+    const int HEIGHT = 1080;
 
-    //integer (whole number)
-    int age = 21;
-    int year = 2023;
-    int days = 7.5;
-
-    //double (number including decimal)
-    double price = 10.99;
-    double gpa = 2.5;
-    double temperature = 25.1;
-
-    //char (single character)
-    char grade = 'A';
-    char initial = 'C';
-    char currency = '$';
-
-    //boolean (true or false)
-    bool student = false;
-    bool power = true;
-    bool forSale = false;
-
-    //string (objetcs that represent a sequence of text)
-    std::string name = "John Vincent Espinosa";
-    std::string day = "Friday";
-    std::string food = "pizza";
-    std::string address = "123 Fake St.";
-
-    std::cout << "Hello " << name << '\n';
-    std::cout << "You are " << age << " years old";
 
     return 0;
 }
