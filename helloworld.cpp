@@ -1,19 +1,17 @@
 #include <iostream>
-#include <vector>
 
-//typedef std::vector<std::pair<std::string, int>> pairlist_t;
-//typedef std::string text_t;
-//typedef int number_t;
-using text_t = std::string;
-using number_t = int;
+int main()
+{
+    // arithmetic operators = return the result of a specific
+    //                         arithmetic operation (+ - * /)
 
-int main() {
+    // parenthesis
+    // multiplication & division
+    // addition & subtraction
 
-    text_t firstName = "John Vincent";
-    number_t age = 22;
+    int students = 6 -  (5 + 4) * 3 / 2;
 
-    std::cout << firstName << '\n';
-    std::cout << age << '\n';
+    std::cout << students;
 
     return 0;
 }
