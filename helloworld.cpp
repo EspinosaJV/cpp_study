@@ -1,10 +1,19 @@
 #include <iostream>
 
+namespace first{
+    int x = 1;
+}
+
+namespace second {
+    int x = 2;
+}
+
 int main() {
-    const double PI = 3.14159;
-    const int LIGHT_SPEED = 299792458;
-    const int WIDTH = 1920;
-    const int HEIGHT = 1080;
+    
+    // Namespace = provides a solution for preventing name conflicts
+    //             in large projects. Each entity needs a unique name.
+    //             A namespace allows for identically nmamed entities
+    //             as long as the namespaces are different
 
 
     return 0;
