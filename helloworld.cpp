@@ -1,31 +1,46 @@
 #include <iostream>
 
-int main()
-{
-    char grade;
+int main() {
 
-    std::cout << "What letter grade?: ";
-    std::cin >> grade;
+    char op;
+    double num1;
+    double num2;
+    double result;
 
-    switch(grade){
-        case 'A':
-            std::cout << "You did great!";
+    std::cout << "*********** CALCULATOR ************\n";
+
+    std::cout << "Enter either (+ - * /): ";
+    std::cin >> op;
+
+    std::cout << "Enter #1: ";
+    std::cin >> num1;
+
+    std::cout << "Enter #2: ";
+    std::cin >> num2;
+
+    switch(op){
+        case '+':
+            result = num1 + num2;
+            std::cout << "Result: " << result << '\n';
             break;
-        case 'B':
-            std::cout << "You did good";
+        case '-':
+            result = num1 - num2;
+            std::cout << "Result: " << result << '\n';
             break;
-        case 'C':
-            std::cout << "You did okay";
+        case '*':
+            result = num1 * num2;
+            std::cout << "Result: " << result << '\n';
             break;
-        case 'D':
-            std::cout << "You did not do good";
-            break;
-        case 'F':
-            std::cout << "YOU FAILED!";
+        case '/':
+            result = num1 / num2;
+            std::cout << "Result: " << result << '\n';
             break;
         default:
-            std::cout << "Please only enter in a letter grade (A-F)";
+            std::cout << "That wasn't a valid operator\n";
+            break;
     }
+
+    std::cout << "*************************************";
 
     return 0;
 }
