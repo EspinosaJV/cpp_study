@@ -2,17 +2,11 @@
 
 int main()
 {
-    // do while loop = do some block of code first,
-    //                  THEN repeat again if condition is true
-
-    int number;
-
-    do{
-        std::cout << "Enter a positive number: ";
-        std::cin >> number;
-    }while (number < 0);
-
-    std::cout << "The number is: " << number;
+    for(int i = 10; i >= 0; i-=2){
+        std::cout << i << '\n';
+    }
+    
+    std::cout << "HAPPY NEW YEAR!\n";
 
     return 0;
 }
