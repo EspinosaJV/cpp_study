@@ -1,23 +1,18 @@
 #include <iostream>
 
-void happyBirthday(std::string name, int age);
+std::string concatStrings(std::string string1, std::string string2);
 
 int main()
 {
-    // function = a block of reusable code
+    std::string firstName = "John Vincent";
+    std::string lastName = "Espinosa";
+    std::string fullName = concatStrings(firstName, lastName);
 
-    std::string name = "John Vincent";
-    int age = 21;
-
-    happyBirthday(name, age);
+    std::cout << "Hello " << fullName;
 
     return 0;
 }
 
-void happyBirthday(std::string name, int age){
-    std::cout << "Happy Birthday to " << name << '\n';
-    std::cout << "Happy Birthday to " << name << '\n';
-    std::cout << "Happy Birthday dear " << name << '\n';
-    std::cout << "Happy Birthday to " << name << '\n';
-    std::cout << "You are " << age << " years old!\n";
+std::string concatStrings(std::string string1, std::string string2){
+    return string1 + " " + string2;
 }
