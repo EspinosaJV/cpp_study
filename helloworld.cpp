@@ -2,11 +2,14 @@
 
 int main()
 {
-    //std::string students[] = {"Spongebob", "Patrick", "Squidward", "Sandy"};
-    char grades[] = {'A', 'B', 'C', 'D', 'F'};
+    // foreach loop = loop that eases the traversal over an
+    //                iterable dataset
 
-    for(int i=0; i < sizeof(grades)/sizeof(char); i++){
-        std::cout << grades[i] << '\n';
+    //std::string students[] = {"Spongebob", "Patrick", "Squidward", "Sandy"};
+    int grades[] = {65, 72, 81, 93};
+
+    for(int grade : grades){
+        std::cout << grade << '\n';
     }
 
     return 0;
