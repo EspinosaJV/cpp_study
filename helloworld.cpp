@@ -2,17 +2,17 @@
 
 int main()
 {
-    double prices[4];
+    // sizeof() = determines the size in bytes of a:
+    //             variable, data type, class, objects, etc.
 
-    prices[0] = 5.00;
-    prices[1] = 7.50;
-    prices[2] = 9.99;
-    prices[3] = 15.00;
+    std::string name = "John Vincent";
+    double gpa = 2.5;
+    char grade = 'F';
+    bool student = true;
+    char grades[] = {'A', 'B', 'C', 'D', 'E', 'F'};
+    std::string students[] = {"Spongebob", "Patrick", "Squidward", "Sandy"};
 
-    std::cout << prices[0] << '\n';
-    std::cout << prices[1] << '\n';
-    std::cout << prices[2] << '\n';
-    std::cout << prices[3] << '\n';
+    std::cout << sizeof(students)/sizeof(std::string) << " elements\n";
 
     return 0;
 }
