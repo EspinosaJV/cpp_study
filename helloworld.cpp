@@ -1,22 +1,33 @@
 #include <iostream>
 
-double getTotal(double prices[], int size);
+int searchArray(std::string array[], int size, std::string element);
 int main()
 {
-    double prices[] = {49.99, 15.05, 75, 9.99};
-    int size = sizeof(prices)/sizeof(prices[0]);
-    double total = getTotal(prices, size);
+    std::string foods[] = {"pizza", "hamburger", "hotdog"};
+    int size = sizeof(foods)/sizeof(foods[0]);
+    int index;
+    std::string myFood;
 
-    std::cout << "$" << total;
+    std::cout << "Enter element to search for: " << '\n';
+    std::getline(std::cin, myFood);
+
+    index = searchArray(foods, size, myFood);
+
+    if(index != -1){
+        std::cout << myFood << " is at index " << index;
+    }
+    else{
+        std::cout << myFood << " is not in the array";
+    }
 
     return 0;
 }
-double getTotal(double prices[], int size){
-    double total = 0;
-
+int searchArray(std::string array[], int size, std::string element){
     for(int i = 0; i < size; i++){
-        total += prices[i];
+        if(array[i] == element){
+            return i;
+        }
     }
 
-    return total;
+    return -1;
 }
