@@ -1,17 +1,21 @@
 #include <iostream>
 
-int main(){
+void swap(std::string &x, std::string &y);
 
-    // memory address = a location in memory where data is stored
-    // a memory address can accessed with & (address-of operator)
+int main()
+{
+    std::string x = "Kool-Aid";
+    std::string y = "Water";
 
-    std::string name = "Bro";
-    int age = 21;
-    bool student = true;
+    swap(x, y);
 
-    std::cout << &name << '\n';
-    std::cout << &age << '\n';
-    std::cout << &student << '\n';
+    std::cout << "X: " << &x << '\n';
+    std::cout << "Y: " << &y << '\n';
 
     return 0;
+}
+
+void swap(std::string &x, std::string &y){
+    std::cout << "X: " << &x << '\n';
+    std::cout << "Y: " << &y << '\n';
 }
