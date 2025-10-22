@@ -1,24 +1,32 @@
 #include <iostream>
 
-int main() {
+int main()
+{
+    // Null value = a special value that means something has no value.
+    //              When a pointer is holding a null value,
+    //              that pointer is not pointing at anything (null pointer)
 
-    // pointers = variable that stores a memory address of another variable
-    //            sometimes it's easier to work with an address
+    // nullptr = keyword represents a null pointer literal
 
-    // & address-of operator
-    // * deference operator
+    // nullptrs are helpful when determinng if an address
+    // was successfully assigned to a pointer
 
-    std::string name = "John Vincent";
-    int age = 22;
-    std::string freePizzas[5] = {"pizza1", "pizza2", "pizza3", "pizza4", "pizza5"};
+    // When using pointers, be careful that your code isn't
+    // dereferencing null or pointing to free memory
+    // this will cause undefined behaviour
 
-    std::string *pName = &name;
-    int *pAge = &age;
-    std::string *pFreePizzas = freePizzas;
+    int *pointer = nullptr;
+    int x = 123;
 
-    std::cout << *pName << '\n';
-    std::cout << *pAge << '\n';
-    std::cout << freePizzas << '\n';
+    pointer = &x;
+
+    if(pointer == nullptr){
+        std::cout << "Address was not assigned!\n";
+    }
+    else{
+        std::cout << "Address was assigned!\n";
+        std::cout << *pointer;
+    }
 
     return 0;
 }
