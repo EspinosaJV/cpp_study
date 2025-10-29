@@ -1,15 +1,23 @@
 #include <iostream>
 
-int main() {
+int factorial(int num);
 
-    // dynamic memory = Memory that is allocated after the program
-    //                  is already compiled & running
-    //                  Use the 'new' operator to allocate
-    //                  memory in the heap rather than the stack
+int main () {
 
-    //                  Useful when we don't know how much memory
-    //                  we will need. Makes our programs more flexible,
-    //                  especially when accepting user input.
+    // recursion = a programming technique where a function
+    //             invokes itself from within
+    //             break a complex concept into a repeatable single step
+
+    std::cout << factorial(10);
 
     return 0;
+}
+
+int factorial(int num){
+    if(num > 1){
+        return num * factorial(num - 1);
+    }
+    else{
+        return 1;
+    }
 }
