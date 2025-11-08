@@ -1,37 +1,50 @@
 #include <iostream>
 
-enum Day {sunday = 0, monday = 1, tuesday = 2, wednesday = 3, thursday = 4, friday = 5, saturday = 6};
+class Car{
+    public:
+        std::string make;
+        std::string model;
+        int year;
+        std::string color;
 
-enum Flavor {vanilla, chocolate, strawberry, mint};
+        void accelerate(){
+            std::cout << "You step on the gas!\n";
+        }
+        void brake(){
+            std::cout << "You step on the brakes!\n";
+        }
+};
 
-enum Color {red, orange, yellow, green, blue, purple};
+int main() {
 
-enum Planet {mercury = 4880, venus = 12104, earth = 12756, mars = 6794, jupiter = 142984, saturn = 108728, uranus = 51118, neptune = 49532, pluto = 2320};
+    Car car1;
+    Car car2;
 
-int main () {
+    car1.make = "Ford";
+    car1.model = "Mustang";
+    car1.year = 2023;
+    car1.color = "silver";
 
-    // enums = a user-defined data type that consists
-    //         of paired named-integer constants.
-    //         GREAT if you have a set of potential options
+    car2.make = "Ford";
+    car2.model = "Mustang";
+    car2.year = 2023;
+    car2.color = "silver";
 
-    Day today = friday;
+    std::cout << car1.make << '\n';
+    std::cout << car1.model << '\n';
+    std::cout << car1.year << '\n';
+    std::cout << car1.color << '\n';
 
-    switch(today){
-        case sunday:  std::cout << "It is Sunday!\n";
-                        break;
-        case monday:  std::cout << "It is Monday!\n";
-                        break;
-        case tuesday: std::cout << "It is Tuesday!\n";
-                        break;
-        case wednesday:   std::cout << "It is Wednesday!\n";
-                            break;
-        case thursday:    std::cout << "It is Thursday!\n";
-                            break;
-        case friday:  std::cout << "It is Friday!\n";
-                        break;
-        case saturday:    std::cout << "It is Saturday!\n";
-                            break;
-    }
+    std::cout << car2.make << '\n';
+    std::cout << car2.model << '\n';
+    std::cout << car2.year << '\n';
+    std::cout << car2.color << '\n';
+
+    car1.accelerate();
+    car1.brake();
+
+    car2.accelerate();
+    car2.brake();
 
     return 0;
 }
