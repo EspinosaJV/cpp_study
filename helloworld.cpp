@@ -7,28 +7,21 @@ class Car{
         int year;
         std::string color;
 
-        void accelerate(){
-            std::cout << "You step on the gas!\n";
-        }
-        void brake(){
-            std::cout << "You step on the brakes!\n";
-        }
+    Car(std::string make, std::string model, int year, std::string color){
+        this->make = make;
+        this->model = model;
+        this->year = year;
+        this->color = color;
+    }
 };
 
 int main() {
 
-    Car car1;
-    Car car2;
+    // constructor = special method that is automatically called when 
+    //               useful for assigning values to attributes as arguments
 
-    car1.make = "Ford";
-    car1.model = "Mustang";
-    car1.year = 2023;
-    car1.color = "silver";
-
-    car2.make = "Ford";
-    car2.model = "Mustang";
-    car2.year = 2023;
-    car2.color = "silver";
+    Car car1("Chevy", "Corvette", 2022, "blue");
+    Car car2("Ford", "Mustang", 2023, "red");
 
     std::cout << car1.make << '\n';
     std::cout << car1.model << '\n';
@@ -39,12 +32,6 @@ int main() {
     std::cout << car2.model << '\n';
     std::cout << car2.year << '\n';
     std::cout << car2.color << '\n';
-
-    car1.accelerate();
-    car1.brake();
-
-    car2.accelerate();
-    car2.brake();
 
     return 0;
 }
