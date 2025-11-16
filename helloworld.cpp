@@ -1,36 +1,38 @@
 #include <iostream>
 
-class Stove{
-    private:
-        int temperature = 0;
+class Shape{
     public:
-    Stove(int temperature){
-        setTemperature(temperature);
-    }
-    int getTemperature(){
-        return temperature;
-    }
-    void setTemperature(int temperature){
-        if(temperature < 0){
-            this->temperature = 0;
-        }
-        else if(temperature >= 10){
-            this->temperature = 10;
-        }
-        else{
-            this->temperature = temperature;
-        }
-    }
-
+        double area;
+        double volume;
 };
-
+class Cube : public Shape{
+    public:
+        double side;
+    Cube(double side){
+        this->side = side;
+        this->area = side * side * 6;
+        this->volume = side * side * side;
+    }
+};
+class Sphere : public Shape{
+    public:
+        double radius;
+    Sphere(double radius){
+        this->radius = radius;
+        this->area = 4 * 3.14159 * (radius * radius);
+        this->volume = (4/3.0) * 3.14159 * (radius * radius * radius);
+    }
+};
 int main() {
 
-    Stove stove(0);
+    Cube cube(10);
+    Sphere sphere(5);
 
-    stove.setTemperature(5);
+    std::cout << "Area: " << cube.area << "cm\n";
+    std::cout << "Volume: " << cube.volume << "cm\n";
 
-    std::cout << "The temperature setting is: " << stove.getTemperature();
+    std::cout << "Area: " << sphere.area << "cm\n";
+    std::cout << "Volume: " << sphere.volume << "cm\n";
 
     return 0;
 }
