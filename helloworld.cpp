@@ -1,21 +1,18 @@
 #include <iostream>
-#include <string>
-using namespace std;
 
 int main() {
-    int x = 1;
-    switch(x + 1){
-        case 1:
-            cout << "cool";
-            break;
-        case 2:
-            cout << "not cool";
-            break;
-        case 10:
-            cout << "interesting";
-            break;
-        default:
-            cout << "default";
-            break;
+    int weeks = 3;
+    int daysInWeek = 7;
+
+    for (int i = 1; i <= weeks; i++){
+        std::cout << "Week: " << i << std::endl;
+
+        for (int j = 1; j <= daysInWeek; j++){
+            // continue if the day is an odd number
+            if (j % 2 != 0) {
+                continue;
+            }
+            std::cout << "Day: " << j << std::endl;
+        }
     }
 }
