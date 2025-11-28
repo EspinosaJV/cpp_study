@@ -1,12 +1,21 @@
 #include <iostream>
+#include <string>
+using namespace std;
 
 int main() {
-    // int result = 5 & 3;
-    // int result = 5 | 3;
-    // int result = 5 ^ 3;
-    //int result = ~5;
-    //int result = 5 << 1;
-    //int result = 5 >> 1;
-    
-    std::cout << result;
+    int x = 1;
+    switch(x + 1){
+        case 1:
+            cout << "cool";
+            break;
+        case 2:
+            cout << "not cool";
+            break;
+        case 10:
+            cout << "interesting";
+            break;
+        default:
+            cout << "default";
+            break;
+    }
 }
