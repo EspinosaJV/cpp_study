@@ -1,43 +1,35 @@
 #include <iostream>
 using namespace std;
 
-class Complex {
-    private:
-        int real, imag;
-    public:
-        Complex(){
-            real = 0;
-            imag = 0;
-        }
-
-        Complex(int r, int i){
-            real = r;
-            imag = i;
-        }
-
-        void print(){
-            cout << real << " + " << imag << "i" << endl;
-        }
-
-        // Operator overloading syntax
-        Complex operator +(Complex c){
-            Complex temp;
-            temp.real = real + c.real;
-            temp.imag = imag + c.imag;
-            return temp;
-        }
-};
-
 int main(){
 
-    Complex c1(5,4);
-    Complex c2(2,5);
-    Complex c3(1,1);
-    Complex c4;
+    // lambda function with no capture, parameters, or return type
+    // auto printHello = []() {
+    //     std::cout << "Hello, World!\n";
+    // };
+    // printHello();
 
-    c4 = c1 + c2;
+    // lambda function with parameters
+    // auto add = [](int a, int b){
+    //     return a + b;
+    // };
+    // int result = add(3, 4);
+    // cout << result << endl;
 
-    c4.print();
-    
+    // lambda function with capture-by-value
+    // int multiplier = 3;
+    // auto times = [multiplier](int a){
+    //     return a * multiplier;
+    // };
+    // int result = times(5);
+    // cout << result << endl;
+
+    // lambda function with capture-by-reference
+    // int expiresInDays = 45;
+    // auto updateDays = [&expiresInDays](int newDays){
+    //     expiresInDays = newDays;
+    // };
+    // updateDays(30);
+
     return 0;
 }
