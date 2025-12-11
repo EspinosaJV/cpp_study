@@ -1,35 +1,24 @@
 #include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 int main(){
+    int d = 7;
+    int e = 5;
+    std::vector <int> v{2, 3, 7, 14, 23};
+    std::for_each(v.begin(), v.end(), [&](int x){
+        if(x % d == 0){
+            std::cout << x << " is divisible by " << d << "\n";
+        } else {
+            std::cout << x << " is not divisible by " << d << "\n";
+        }
+        d = 10;
+        e = 19;
+        std::cout << d << " is the new d value" << "\n";
+        std::cout << e << " is the new e value" << "\n";
+    });
 
-    // lambda function with no capture, parameters, or return type
-    // auto printHello = []() {
-    //     std::cout << "Hello, World!\n";
-    // };
-    // printHello();
-
-    // lambda function with parameters
-    // auto add = [](int a, int b){
-    //     return a + b;
-    // };
-    // int result = add(3, 4);
-    // cout << result << endl;
-
-    // lambda function with capture-by-value
-    // int multiplier = 3;
-    // auto times = [multiplier](int a){
-    //     return a * multiplier;
-    // };
-    // int result = times(5);
-    // cout << result << endl;
-
-    // lambda function with capture-by-reference
-    // int expiresInDays = 45;
-    // auto updateDays = [&expiresInDays](int newDays){
-    //     expiresInDays = newDays;
-    // };
-    // updateDays(30);
-
+    system("pause>nul");
     return 0;
 }
