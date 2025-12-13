@@ -1,15 +1,26 @@
 #include <iostream>
+using namespace std;
 
-// Template function to print ANY type
-template<typenameT>
-void print(const T& value){
-    std::cout << "Printing value: " << value << "\n";
-}
+class Base{
+    public:
+        virtual void print(){
+            cout << "This is the function of the base class" << endl;
+        }
+};
+
+class Child: public Base{
+    public:
+        void print(){
+            cout << "This is the function of the child class or the derived class" << endl;
+        }
+};
 
 int main(){
-    print(42);
-    print(3.14159);
-    print("Hello");
+    Base* b;
+    Child c;
+
+    b = &c;
+    b -> print();
 
     return 0;
 }
