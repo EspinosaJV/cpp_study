@@ -1,26 +1,34 @@
 #include <iostream>
+#include<list>
 using namespace std;
 
-class Base{
+class User{
     public:
-        virtual void print(){
-            cout << "This is the function of the base class" << endl;
+        virtual void getPermissions(){
+            cout << "Users can see limited information" << endl;
         }
 };
 
-class Child: public Base{
+class SuperUser : public User{
     public:
-        void print(){
-            cout << "This is the function of the child class or the derived class" << endl;
+        void getPermissions(){
+            cout << "Super Users can see all of the information" << endl;
         }
 };
 
 int main(){
-    Base* b;
-    Child c;
 
-    b = &c;
-    b -> print();
+    User u;
+    SuperUser s;
+    list<User*>users;
 
-    return 0;
+    users.push_back(&u);
+    users.push_back(&s);
+
+    for(User* userPtr:users){
+        userPtr->getPermissions();
+    }
+
+
+    cin.get();
 }
