@@ -1,34 +1,35 @@
+// TOPIC: Polymorphism in C++!! (Very Important Feature of OOP)
+
+// POINTS:
+// There are two types of polymorphism
+// A. Compile Time Polymorphism / Static Binding / Early Binding
+//      a. Function Overloading
+//      b. Operator Overloading
+// B. Runtime Polymorphism / Dynamic Binding / Lazy Binding
+//      a. Function Overriding (Using virtual functions)
+
 #include <iostream>
-#include<list>
 using namespace std;
 
-class User{
+class Base{
     public:
-        virtual void getPermissions(){
-            cout << "Users can see limited information" << endl;
+        virtual void fun(int x){
+            cout << "Base" << endl;
         }
 };
 
-class SuperUser : public User{
+class Derived : public Base{
     public:
-        void getPermissions(){
-            cout << "Super Users can see all of the information" << endl;
+        virtual void fun(int x) override{
+            cout << "Derived" << endl;
         }
 };
 
 int main(){
+    Derived d;
+    Base &b = d;
+    
+    b.fun(10);
 
-    User u;
-    SuperUser s;
-    list<User*>users;
-
-    users.push_back(&u);
-    users.push_back(&s);
-
-    for(User* userPtr:users){
-        userPtr->getPermissions();
-    }
-
-
-    cin.get();
+    return 0; 
 }
