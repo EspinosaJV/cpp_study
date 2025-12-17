@@ -1,37 +1,49 @@
 #include <iostream>
 using namespace std;
 
-int add(int a, int b){ // function 1
-    cout << "This is function 1!" << endl;
-    return a + b;
-}
+class Person{
+    public:
+        std::string name;
+        int age;
 
-double add(double a, double b){ // function 2
-    cout << "This is function 2!" << endl;
-    return a + b;
-}
-
-int add(int a, int b, int c){ // function 3
-    cout << "This is function 3!" << endl;
-    return a + b + c;
-}
-
-double add(int a, double b){ // function 4
-    cout << "This is function 4!" << endl;
-    return a + b;
-}
-
-double add(double a, int b){ // function 5
-    cout << "This is function 5!" << endl;
-    return a + b;
-}
+        void printInfo(){
+            cout << "Name: " << name << ", Age: " << age << '\n';
+        };
+};
 
 int main(){
-    cout << "addition is: " << add(1,2) << endl; // function 1
-    cout << "addition is: " << add(3.5, 4.5) << endl; // function 2
-    cout << "addition is: " << add(3, 4, 5) << endl; // function 3
-    cout << "addition is: " << add(3, 4.5) << endl; // function 4
-    cout << "addition is: " << add(3.5, 4) << endl; // function 5
+
+    int num = 42;
+    float pi = 3.14f;
+    double pi_high_precision = 3.1415926535;
+    char letter = 'A';
+    bool is_cpp_great = true;
+    int numbers[5] = {1, 2, 3, 4, 5};
+    int scores[10] = {100, 95, 98};
+    int allZero[0] = {0};
+    int num = 42;
+    int* pNum = &num;
+    int num = 42;
+    int& numRef = num;
+    
+    // struct Person {
+    //     std::string name;
+    //     int age;
+    //     float height;
+    // };
+
+    Person p1;
+    p1.name = "John Doe";
+    p1.age = 30;
+
+    union Data{
+        int num;
+        char letter;
+        float decimal;
+    };
+
+    Data myData;
+    myData.num = 42;
 
     return 0;
 }
