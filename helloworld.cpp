@@ -1,25 +1,27 @@
 #include <iostream>
+using namespace std;
 
-void bakePizza();
-void bakePizza(std::string topping1);
-void bakePizza(std::string topping1, std::string topping2);
+int sum(int a, int b);
+double sum(double a, double b);
+float sum(float a, float b, float c);
 
 int main(){
-    bakePizza();
-    bakePizza("pepperoni");
-    bakePizza("pepperoni", "mushrooms");
+
+    cout << sum(4, 3) << endl;
+    cout << sum(4.4, 3.3) << endl;
+    cout << sum(4.4, 3.3, 2.2) << endl;
     
     return 0;
 }
 
-void bakePizza(){
-    std::cout << "Here is your pizza!" << std::endl;
+int sum(int a, int b){
+    return a + b;
 }
 
-void bakePizza(std::string topping1){
-    std::cout << "Here is your " << topping1 << " pizza!\n";
+double sum(double a, double b){
+    return a + b;
 }
 
-void bakePizza(std::string topping1, std::string topping2){
-    std::cout << "Here is your " << topping1 << " and " << topping2 << " pizza!\n";
+float sum(float a, float b, float c){
+    return a + b + c;
 }
