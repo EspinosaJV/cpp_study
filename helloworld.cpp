@@ -1,20 +1,16 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
-int main(){
-    int x, y;
-    string x;
+int main() {
+    int num_int;
+    double num_double = 9.99;
 
-    cout << x;
+    // implicit conversion
+    // assigning a double value to an int variable
+    num_int = num_double;
+
+    cout << "num_int = " << num_int << endl;
+    cout << "num_double = " << num_double << endl;
 
     return 0;
 }
-
-/*
-    int
-    float
-    bool
-    string
-    char
-*/
