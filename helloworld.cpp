@@ -1,16 +1,13 @@
 #include <iostream>
-using namespace std;
 
-int main() {
-    int num_int;
-    double num_double = 9.99;
+extern int s_Variable;
 
-    // implicit conversion
-    // assigning a double value to an int variable
-    num_int = num_double;
+void Function(){
+    
+}
 
-    cout << "num_int = " << num_int << endl;
-    cout << "num_double = " << num_double << endl;
+int main(){
+    std::cout << s_Variable << std::endl;
 
     return 0;
 }
